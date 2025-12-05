@@ -92,3 +92,14 @@ We suggest using extensions on your IDE to recognize and format MDX. If you're a
 </AccordionGroup>
 
 Curious about what changed in the latest CLI version? Check out the [CLI changelog](https://www.npmjs.com/package/mintlify?activeTab=versions).
+
+## If you need someone else to generate a preview for you
+
+When you ask someone to run `mint dev` or share a preview on your behalf, provide the following details so they can help without delays:
+
+- Your operating system and whether Node.js (v19+) and npm are already installed.
+- Any network or package-manager restrictions (for example, if `apt-get` or `npm` installs are blocked).
+- Whether you can supply a prebuilt static export from `mint build` (zip the output) if runtime installs are not possible.
+- The branch, commit, or archive of the docs you want previewed, along with any environment variables or feature flags they should enable.
+
+This context lets someone set up the tooling (or use your prebuilt bundle) to produce a screenshot or live preview.
