@@ -1,0 +1,154 @@
+---
+title: "AI Fashion Platform Overview"
+description: "End-to-end documentation of the multi-module AI-powered fashion ecosystem."
+---
+
+## Vision and scope
+
+This platform is a full-stack, AI-powered fashion operating system that unifies discovery, styling, design, purchasing, wardrobe management, and social experiences. It connects consumers, creators, suppliers, and authenticators across a single experience that is driven by personal taste modeling and measurement-aware fit intelligence.
+
+## Core concept
+
+- Build an AI taste and fit profile from onboarding questions, stated preferences, and behavioral signals.
+- Use that profile everywhere: recommendations, search relevance, outfit generation, closet usage, avatar sizing, and supplier selections.
+- Combine owned wardrobe data, retailer catalogs, and supplier inventories to generate shoppable, remixable, and manufacturable looks.
+
+## High-level user journey
+
+1. **Authenticate and onboard** to capture style, budget, and measurement inputs and form the taste and fit baseline.
+2. Land on a **dashboard** that surfaces recommendations, saved outfits, social updates, orders, and supplier shortcuts.
+3. Explore the **Catalog** and **For You AI Search** to find branded items, alternatives, accessories, and price tiers.
+4. Generate or curate outfits via the **Outfit Generator** and save them for later in **Saved Outfits**.
+5. Upload real garments into the **Smart Closet** to personalize generation, avatar try-ons, and marketplace listings.
+6. Design custom pieces in the **Design Studio** and route them to suppliers via the **Supplier Portal**.
+7. Buy, sell, and authenticate items in the **Marketplace**, or share looks in the **Fashion Social Feed** and **Inspiration** boards.
+8. Maintain **Measurements** and **Wishlist** data that flows into all modules, including the **3D Avatar** fitting experience.
+
+## Module overview
+
+### Authentication & taste onboarding
+
+- Account creation is required before accessing core flows.
+- Onboarding asks AI-analyzed questions about style categories, color palettes, budget, and brand affinity to build a taste vector and fit baseline.
+- Outputs feed personalization services used across search, recommendations, outfits, and avatar sizing.
+
+### Dashboard
+
+- Central control panel showing AI recommendations, saved outfits, quick links to Smart Closet, supplier options, marketplace notifications, orders, and social activity.
+- Surfaces next-best actions (e.g., "Try this look with your uploaded jacket" or "Authenticate your listing").
+
+### Catalog (fast-fashion outlet hub)
+
+- Aggregates products from brands like Zara, H&M, and Bershka with outbound links to official stores for purchase.
+- Browsing and filters: category, occasion, style, price range, and brand.
+- Personalization ranks items by taste profile and current season/occasion context.
+
+### "For You" AI fashion search engine
+
+- Natural-language search for requests such as "black oversized streetwear jacket".
+- AI expands queries, searches multiple stores, and returns similar products, cross-brand alternatives, accessories, and price-tier options.
+- Results are bias-corrected by the taste profile and fit signals.
+
+### Outfit Generator
+
+- Uses taste, seasonality, color preferences, occasion, and owned items to propose full looks.
+- Supports regeneration, per-item tweaks, and saving presets.
+- Can constrain generation to owned garments, catalog items, or supplier-ready designs.
+
+### Saved Outfits
+
+- Stores AI-generated or manually assembled outfits.
+- Supports reordering, renaming, and deletion.
+- Acts as input to avatar try-ons, social posts, and wishlist conversions.
+
+### Smart Closet (upload real clothes)
+
+- Users upload photos to digitize their wardrobe.
+- Items are tagged, categorized, and made available to the generator and avatar.
+- Maintains provenance between uploaded items and marketplace listings or outfits.
+
+### My Clothing
+
+- Distinguishes between purchases via platform links and manually uploaded pieces.
+- Enables outfit creation restricted to real items for authenticity-first users.
+
+### Design Studio
+
+- Starts from factory-ready blanks and allows color, cut, texture, and logo adjustments.
+- Outputs manufacturable specifications that can be ordered immediately, saved, or used to seed a brand line.
+
+### Supplier Portal
+
+- Lists manufacturers and available stock, including minimum order quantities when required.
+- Accepts orders for both custom designs (from the Design Studio) and unmodified stock.
+- Provides visibility into production status and fulfillment milestones.
+
+### Marketplace (buy & sell)
+
+- Two selling modes: open listings without authentication, and certified authentication (item is shipped to us for verification with a $30 service fee).
+- Buyers search by brand, condition, size, and authenticity status.
+- Integrates with Smart Closet so sellers can list from their digitized wardrobe.
+
+### Fashion Social Feed
+
+- Fashion-first social module with For You, Discover (style-similar users), Following, and Notifications.
+- Users can post outfits, comment, like, follow, and send DMs (including outfits).
+- AI curates feeds based on taste proximity, recency, and engagement quality.
+
+### Inspiration tab
+
+- Pinterest-style boards for saving, categorizing, and reusing fashion looks.
+- Can promote inspiration pins into outfit generation seeds.
+
+### Measurements
+
+- Measurements entered manually or captured via phone scan.
+- Feed into recommendations, fit predictions, and avatar sizing.
+- Track deltas over time to keep fit accuracy fresh.
+
+### Wishlist
+
+- Save single items, partial looks, or full outfits for later purchase.
+- Acts as a cross-module queue that informs recommendations and supplier demand signals.
+
+### 3D Avatar
+
+- Personalized avatar built from measurement data and style cues.
+- Supports try-ons with AI-generated looks, catalog items, Smart Closet garments, and design prototypes.
+
+## Target result
+
+Deliver a one-stop AI-driven fashion ecosystem that lets users discover trends, design and manufacture pieces, manage a digitized wardrobe, try outfits on a personal 3D avatar, buy and sell with authenticity controls, and share socially—all powered by a continuously improving taste and fit profile.
+
+## Cross-cutting AI services
+
+- **Taste modeling:** vector representation trained from onboarding answers, browsing, purchases, and social signals.
+- **Fit and measurement intelligence:** predicts size/fit recommendations and drives avatar dimensions.
+- **Retrieval and ranking:** blends taste vectors, occasion/season context, and price sensitivity for search and recommendations.
+- **Image understanding:** powers wardrobe tagging, outfit compatibility scoring, and inspiration ingestion.
+- **Safety and authenticity:** detects counterfeit risk for marketplace listings and validates supplier outputs where possible.
+
+## Data flow and interoperability
+
+- Onboarding → taste vector and baseline measurements available to Catalog, Search, Generator, Avatar, and Supplier Portal.
+- Smart Closet → generator constraints, avatar try-ons, marketplace listings, and social posts.
+- Design Studio → Supplier Portal orders and Marketplace listings for custom pieces.
+- Wishlist and Saved Outfits → dashboard highlights, social sharing, and purchase prompts.
+- Measurements → size guidance, avatar updates, and supplier production specs.
+
+## Operational considerations
+
+- **Governance:** certified authentication flow introduces verification SLAs and fee management.
+- **Privacy:** wardrobe images and measurements require clear consent and retention policies.
+- **Scalability:** catalog ingestion, search indexing, and image processing should be asynchronous to keep the UX responsive.
+- **Internationalization:** brand availability, sizing systems, and supplier minimums may vary by region.
+
+## Success metrics
+
+- Onboarding completion rate and taste profile coverage.
+- CTR and conversion on personalized recommendations and AI search.
+- Outfit Generator saves and downstream purchase rate.
+- Smart Closet uploads and usage in outfits/avatar.
+- Supplier orders per design and reorder frequency.
+- Marketplace GMV and authentication opt-in rate.
+- Social engagement (posts, DMs, saves) and inspiration-to-outfit conversions.
