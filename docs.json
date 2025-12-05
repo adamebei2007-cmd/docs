@@ -16,6 +16,7 @@
           {
             "group": "Getting started",
             "pages": [
+              "platform-overview",
               "index",
               "quickstart",
               "development"
